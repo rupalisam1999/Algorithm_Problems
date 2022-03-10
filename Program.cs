@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlgorithmsProblem.Prime_No;
+using System;
 
 namespace AlgorithmsProblem
 {
@@ -7,24 +8,31 @@ namespace AlgorithmsProblem
     {
         static void Main(string[] args)
         {
-            int[] arr = { 78, 55, 45, 98, 13 };
-            int temp;
-            for (int j = 0; j <= arr.Length - 2; j++)
+            Console.WriteLine("Welcome to Algorithm Problems!");
+            string flag = "Y";
+            while (flag == "Y" || flag == "y")
             {
-                for (int i = 0; i <= arr.Length - 2; i++)
-                {
-                    if (arr[i] > arr[i +1])
-                    {
-                        temp = arr[i + 1];
-                        arr[i + 1] = arr[i];
-                        arr[i] = temp;
-                    }
+                Console.WriteLine("1.Prime number in range");
+                Console.WriteLine("Enter the option");
+                int num = Convert.ToInt32(Console.ReadLine());
+                switch (num)
+                { 
+                     case 1:
+                    Console.WriteLine("The prime numbers are : ");
+                    PrimeNo primeNum = new PrimeNo();
+                    primeNum.FindPrime();
+                    break;
+
+                default:
+                    Console.WriteLine("Enter the valid option!");
+                    break;
                 }
+                Console.WriteLine("\nDo you want to continue");
+                flag = Console.ReadLine();
             }
-            Console.WriteLine("Sorted:");
-            foreach (int p in arr)
-                Console.Write(p + " ");
-            Console.Read();
+
+
+
         }
     }
 }
