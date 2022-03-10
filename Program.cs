@@ -14,6 +14,7 @@ namespace AlgorithmsProblem
             {
                 Console.WriteLine("1.Prime number in range");
                 Console.WriteLine("2.Bubble Sort");
+                Console.WriteLine("3.Permutation Using Recursion");
                 Console.WriteLine("Enter the option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -28,6 +29,13 @@ namespace AlgorithmsProblem
                         int[] arr1 = { 10, 2, 14, 3, 1, 5, 9 };
                         BubbleSort.BubbleSortInArray(arr1);
                         BubbleSort.PrintArray(arr1);
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Enter String to find Permutation ");
+                        string str = Console.ReadLine();
+                        int n = str.Length;
+                        Permutation.Permutate(str, 0, n - 1);
                         break;
 
                     default:
