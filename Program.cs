@@ -13,6 +13,7 @@ namespace AlgorithmsProblem
             while (flag == "Y" || flag == "y")
             {
                 Console.WriteLine("1.Prime number in range");
+                Console.WriteLine("2.Bubble Sort");
                 Console.WriteLine("Enter the option");
                 int num = Convert.ToInt32(Console.ReadLine());
                 switch (num)
@@ -23,7 +24,13 @@ namespace AlgorithmsProblem
                     primeNum.FindPrime();
                     break;
 
-                default:
+                    case 2:
+                        int[] arr1 = { 10, 2, 14, 3, 1, 5, 9 };
+                        BubbleSort.BubbleSortInArray(arr1);
+                        BubbleSort.PrintArray(arr1);
+                        break;
+
+                    default:
                     Console.WriteLine("Enter the valid option!");
                     break;
                 }
